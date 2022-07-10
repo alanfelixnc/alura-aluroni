@@ -3,14 +3,14 @@ import { ReactComponent as Logo } from 'assets/logo.svg';
 import Buscador from './Buscador';
 import { useState } from 'react';
 import Filtros from './Filtros';
-import { IFiltro } from 'types/cardapio';
+import { IFiltro, IOpcoesOrdenador } from 'types/cardapio';
 import Ordenador from './Ordenador';
 import Itens from './Itens';
 
 export default function Cardapio() {
   const [busca, setBusca] = useState('');
   const [filtro, setFiltro] = useState<IFiltro>(null);
-  const [ordenador, setOrdenador] = useState('');
+  const [ordenador, setOrdenador] = useState<IOpcoesOrdenador>('');
 
   return (
     <main>

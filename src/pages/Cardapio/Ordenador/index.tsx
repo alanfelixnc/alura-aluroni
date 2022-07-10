@@ -3,10 +3,11 @@ import opcoes from './opcoes.json';
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
+import { IOpcoesOrdenador } from 'types/cardapio';
 
 interface Props {
-  ordenador: string;
-  setOrdenador: React.Dispatch<React.SetStateAction<string>>;
+  ordenador: IOpcoesOrdenador;
+  setOrdenador: React.Dispatch<React.SetStateAction<IOpcoesOrdenador>>;
 }
 
 export default function Ordenador({ ordenador, setOrdenador }: Props) {
@@ -39,7 +40,7 @@ export default function Ordenador({ ordenador, setOrdenador }: Props) {
           <div
             className={styles.ordenador__option}
             key={opcao.value}
-            onClick={() => setOrdenador(opcao.value)}
+            onClick={() => setOrdenador(opcao.value as IOpcoesOrdenador)}
           >
             {opcao.nome}
           </div>
