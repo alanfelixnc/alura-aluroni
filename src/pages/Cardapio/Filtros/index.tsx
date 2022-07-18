@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 import React from 'react';
-import { IFiltro } from 'types/cardapio';
+import { Filtro } from 'types/Cardapio';
 import filtros from './filtros.json';
 import styles from './Filtros.module.scss';
 
 type IOpcao = typeof filtros[0];
 interface Props {
-  filtro: IFiltro;
-  setFiltro: React.Dispatch<React.SetStateAction<IFiltro>>;
+  filtro: Filtro;
+  setFiltro: React.Dispatch<React.SetStateAction<Filtro>>;
 }
 
 export default function Filtros({ filtro, setFiltro }: Props) {

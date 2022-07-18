@@ -3,14 +3,14 @@ import theme from 'styles/Tema.module.scss';
 import Buscador from './Buscador';
 import { useState } from 'react';
 import Filtros from './Filtros';
-import { IFiltro, IOpcoesOrdenador } from 'types/cardapio';
+import { Filtro, OpcoesOrdenador } from 'types/Cardapio';
 import Ordenador from './Ordenador';
 import Itens from './Itens';
 
 export default function Cardapio() {
   const [busca, setBusca] = useState('');
-  const [filtro, setFiltro] = useState<IFiltro>(null);
-  const [ordenador, setOrdenador] = useState<IOpcoesOrdenador>('');
+  const [filtro, setFiltro] = useState<Filtro>(null);
+  const [ordenador, setOrdenador] = useState<OpcoesOrdenador>('');
 
   return (
     <section className={styles.cardapio}>
